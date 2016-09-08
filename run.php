@@ -1,4 +1,11 @@
 <?php
+$hours = date('H');
+if (!($hours >= 8 && $hours <= 24)) {
+    exit;
+}
+
+sleep(rand(20,100));
+
 include __DIR__ . '/vendor/autoload.php';
 
 $root = __DIR__;
